@@ -1,5 +1,5 @@
-import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
     return (
@@ -126,7 +126,7 @@ const Services = () => {
                 <Container>
                     <h2 className="text-white mb-4">พร้อมเริ่มต้นโครงการกับเราแล้วหรือยัง?</h2>
                     <p className="opacity-75 mb-4">ปรึกษาผู้เชี่ยวชาญของเราวันนี้ ไม่มีค่าใช้จ่าย</p>
-                    <a href="/contact" className="btn-orange text-decoration-none">ติดต่อเราทันที</a>
+                    <Link to="/contact" className="btn-orange text-decoration-none">ติดต่อเราทันที</Link>
                 </Container>
             </section>
         </div>

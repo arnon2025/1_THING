@@ -1,5 +1,5 @@
-import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const Partners = () => {
     return (
@@ -99,9 +99,9 @@ const Partners = () => {
                                 เราเปิดรับพันธมิตรทางธุรกิจที่มีวิสัยทัศน์เดียวกัน
                                 ติดต่อเราเพื่อหารือโอกาสความร่วมมือ
                             </p>
-                            <a href="/contact" className="btn-primary-gradient">
+                            <Link to="/contact" className="btn-primary-gradient text-decoration-none">
                                 ติดต่อเรา
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </Container>
