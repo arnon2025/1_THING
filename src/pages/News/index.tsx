@@ -63,7 +63,7 @@ const News = () => {
                                         <p className="text-muted small mb-2"><i className="bx bx-calendar me-1"></i> {news.date}</p>
                                         <h5 className="mb-3">{news.title}</h5>
                                         <p className="text-muted small mb-4">{news.desc}</p>
-                                        <a href="#" className="btn-link">อ่านรายละเอียด <i className="bx bx-right-arrow-alt"></i></a>
+                                        <a href="#!" className="btn-link">อ่านรายละเอียด <i className="bx bx-right-arrow-alt"></i></a>
                                     </div>
                                 </div>
                             </Col>

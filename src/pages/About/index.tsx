@@ -118,8 +118,8 @@ const About = () => {
                                     <h5 className="mb-1">{member.name}</h5>
                                     <p className="text-orange small fw-bold">{member.role}</p>
                                     <div className="team-social">
-                                        <a href="#"><i className="bx bxl-linkedin"></i></a>
-                                        <a href="#"><i className="bx bxl-twitter"></i></a>
+                                        <a href="#!"><i className="bx bxl-linkedin"></i></a>
+                                        <a href="#!"><i className="bx bxl-twitter"></i></a>
                                     </div>
                                 </div>
                             </Col>

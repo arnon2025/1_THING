@@ -16,10 +16,10 @@ const Footer = () => {
                                 เรามุ่งมั่นส่งมอบผลงานคุณภาพเพื่อขับเคลื่อนธุรกิจสู่ความสำเร็จ
                             </p>
                             <div className="social-icons">
-                                <a href="#"><i className="bx bxl-facebook"></i></a>
-                                <a href="#"><i className="bx bxl-twitter"></i></a>
-                                <a href="#"><i className="bx bxl-linkedin"></i></a>
-                                <a href="#"><i className="bx bxl-instagram"></i></a>
+                                <a href="#!"><i className="bx bxl-facebook"></i></a>
+                                <a href="#!"><i className="bx bxl-twitter"></i></a>
+                                <a href="#!"><i className="bx bxl-linkedin"></i></a>
+                                <a href="#!"><i className="bx bxl-instagram"></i></a>
                             </div>
                         </Col>
                         <Col lg={4} className="mb-4 mb-lg-0">
