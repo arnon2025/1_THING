@@ -17,16 +17,16 @@ const Footer = () => {
                         <Col lg={2} md={6} className="mb-4">
                             <h5 className="footer-title">Company</h5>
                             <ul className="list-unstyled">
-                                <li><Link to="#" className="footer-link">About Us</Link></li>
-                                <li><Link to="#" className="footer-link">Careers</Link></li>
-                                <li><Link to="#" className="footer-link">Contact</Link></li>
+                                <li><Link to="/about" className="footer-link">About Us</Link></li>
+                                <li><Link to="/contact" className="footer-link">Careers</Link></li>
+                                <li><Link to="/contact" className="footer-link">Contact</Link></li>
                             </ul>
                         </Col>
                         <Col lg={2} md={6} className="mb-4">
                             <h5 className="footer-title">Resources</h5>
                             <ul className="list-unstyled">
-                                <li><Link to="#" className="footer-link">Blog</Link></li>
-                                <li><Link to="#" className="footer-link">Help Center</Link></li>
+                                <li><Link to="/news" className="footer-link">Blog</Link></li>
+                                <li><Link to="/contact" className="footer-link">Help Center</Link></li>
                             </ul>
                         </Col>
                     </Row>

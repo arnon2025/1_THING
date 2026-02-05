@@ -1,6 +1,4 @@
 import React from "react";
-
-// Dashboard
 import Dashboard from "../pages/Dashboard";
 
 // Landing
