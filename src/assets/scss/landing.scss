@@ -65,6 +65,10 @@ $white: #ffffff;
         background-color: $accent-orange !important;
     }
 
+    .bg-light-blue-soft {
+        background-color: #f0f7ff !important;
+    }
+
     // Navbar
     .navbar-custom {
         padding: 12px 0;
@@ -240,6 +244,19 @@ $white: #ffffff;
             &:hover {
                 background-color: $white;
                 color: $primary-blue !important;
+            }
+        }
+
+        .btn-outline-blue {
+            border: 2px solid $primary-blue;
+            color: $primary-blue;
+            background: transparent;
+            font-weight: 600;
+            transition: all 0.3s;
+
+            &:hover {
+                background: $primary-blue;
+                color: $white !important;
             }
         }
 
@@ -468,6 +485,138 @@ $white: #ffffff;
         }
     }
 
+    // Why Choose Us Section
+    .choose-us-list {
+        .check-icon {
+            width: 32px;
+            height: 32px;
+            background: $accent-orange;
+            color: $white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-top: 4px;
+        }
+
+        h5 {
+            font-size: 1.15rem;
+            color: $primary-blue;
+        }
+    }
+
+    .image-container {
+        position: relative;
+
+        .experience-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: $white;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            border-bottom: 5px solid $accent-orange;
+
+            h3 {
+                color: $primary-blue;
+                font-size: 2.5rem;
+                line-height: 1;
+                font-weight: 800;
+            }
+
+            span {
+                color: #666;
+                font-weight: 600;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .experience-badge {
+                left: 20px;
+                bottom: 20px;
+            }
+        }
+    }
+
+    // News Preview Cards
+    .news-card-simple {
+        background: $white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 86, 163, 0.1);
+
+            .news-img img {
+                transform: scale(1.1);
+            }
+        }
+
+        .news-img {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.6s ease;
+            }
+
+            .news-date {
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                background: $accent-orange;
+                color: $white;
+                padding: 4px 12px;
+                border-radius: 5px;
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+
+        .news-content {
+            padding: 25px;
+
+            h5 {
+                margin-bottom: 12px;
+                font-size: 1.15rem;
+                line-height: 1.4;
+            }
+
+            .hover-blue:hover {
+                color: $primary-blue !important;
+            }
+
+            .btn-link {
+                color: $primary-blue;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 14px;
+                display: inline-flex;
+                align-items: center;
+
+                i {
+                    margin-left: 5px;
+                    transition: transform 0.3s;
+                }
+
+                &:hover i {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+
     // Footer
     .footer {
         padding: 80px 0 30px;
@@ -548,6 +697,36 @@ $white: #ffffff;
         }
     }
 
+    // Forms & Buttons
+    .form-control {
+        padding: 12px 15px;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 86, 163, 0.1);
+        font-family: 'Prompt', sans-serif;
+
+        &:focus {
+            box-shadow: 0 0 0 0.25rem rgba(0, 86, 163, 0.1);
+            border-color: $primary-blue;
+        }
+    }
+
+    .btn-primary-gradient {
+        background: linear-gradient(135deg, $primary-blue 0%, $light-blue 100%);
+        color: $white;
+        border: none;
+        padding: 12px 40px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s;
+        box-shadow: 0 5px 15px rgba(0, 86, 163, 0.2);
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 86, 163, 0.3);
+            color: $white;
+        }
+    }
+
     // Animations
     @keyframes float {
 
@@ -558,6 +737,126 @@ $white: #ffffff;
 
         50% {
             transform: translateY(-20px);
+        }
+    }
+
+    // Industry Cards
+    .industry-card {
+        transition: all 0.3s;
+        overflow: hidden;
+        border-radius: 15px;
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 86, 163, 0.1) !important;
+        }
+
+        .industry-img {
+            height: 200px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    // Process Items
+    .process-item {
+        position: relative;
+        padding: 20px;
+
+        .process-step {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(0, 86, 163, 0.05);
+            line-height: 1;
+        }
+
+        .process-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background: $white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 30px;
+            color: $primary-blue;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 2px dashed rgba(0, 86, 163, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        h5 {
+            color: $primary-blue;
+            font-weight: 700;
+        }
+    }
+
+    // Value Items
+    .value-item {
+        padding: 20px;
+
+        .value-icon {
+            font-size: 40px;
+            color: $accent-orange;
+            margin-bottom: 15px;
+        }
+
+        h5 {
+            color: $primary-blue;
+            margin-bottom: 10px;
+        }
+    }
+
+    // Team Cards
+    .team-card {
+        padding: 20px;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+
+            .team-img-wrapper::after {
+                opacity: 0.6;
+            }
+        }
+
+        .team-img-wrapper {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border: 5px solid rgba(0, 86, 163, 0.05);
+            }
+        }
+
+        .team-social {
+            margin-top: 15px;
+
+            a {
+                color: #ccc;
+                margin: 0 8px;
+                font-size: 20px;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $primary-blue;
+                }
+            }
         }
     }
 

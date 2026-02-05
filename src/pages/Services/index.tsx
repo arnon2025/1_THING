@@ -91,6 +91,44 @@ const Services = () => {
                     </Row>
                 </Container>
             </section>
+
+            {/* Work Process Section */}
+            <section className="section bg-light-blue-soft">
+                <Container>
+                    <div className="section-title">
+                        <h6 className="text-orange fw-bold text-uppercase mb-2">กระบวนการทำงานของเรา</h6>
+                        <h2>ขั้นตอนการส่งมอบคุณค่า</h2>
+                    </div>
+                    <Row className="justify-content-center">
+                        {[
+                            { step: '01', title: 'Consultation', desc: 'พูดคุยเพื่อทำความเข้าใจเป้าหมายและปัญหาของธุรกิจอย่างถ่องแท้', icon: 'bx-chat' },
+                            { step: '02', title: 'Data Strategy', desc: 'วางแผนและออกแบบแนวทางการจัดการข้อมูลที่เหมาะสมที่สุด', icon: 'bx-map-alt' },
+                            { step: '03', title: 'Implementation', desc: 'เริ่มกระบวนการพัฒนาและติดตั้งระบบด้วยความเชี่ยวชาญ', icon: 'bx-cog' },
+                            { step: '04', title: 'Success', desc: 'ส่งมอบงานพร้อมการดูแลและประเมินผลอย่างต่อเนื่อง', icon: 'bx-rocket' }
+                        ].map((item, idx) => (
+                            <Col lg={3} md={6} key={idx} className="mb-4">
+                                <div className="process-item text-center">
+                                    <div className="process-step">{item.step}</div>
+                                    <div className="process-icon-wrapper">
+                                        <i className={`bx ${item.icon}`}></i>
+                                    </div>
+                                    <h5 className="mt-3">{item.title}</h5>
+                                    <p className="text-muted small mb-0">{item.desc}</p>
+                                </div>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
+            </section>
+
+            {/* CTA Section */}
+            <section className="section bg-blue text-white text-center py-5">
+                <Container>
+                    <h2 className="text-white mb-4">พร้อมเริ่มต้นโครงการกับเราแล้วหรือยัง?</h2>
+                    <p className="opacity-75 mb-4">ปรึกษาผู้เชี่ยวชาญของเราวันนี้ ไม่มีค่าใช้จ่าย</p>
+                    <a href="/contact" className="btn-orange text-decoration-none">ติดต่อเราทันที</a>
+                </Container>
+            </section>
         </div>
     );
 };

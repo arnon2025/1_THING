@@ -15,82 +15,59 @@ const News = () => {
 
             <section className="section">
                 <Container>
-                    <Row className="g-4 justify-content-center">
-                        <Col lg={4} md={6}>
-                            <div className="modern-card fade-in">
-                                <div style={{
-                                    height: '200px',
-                                    background: 'var(--gradient-primary)',
-                                    borderRadius: 'var(--radius-md)',
-                                    marginBottom: '1.5rem',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    color: 'white',
-                                    fontSize: '3rem'
-                                }}>
-                                    <i className='bx bx-news'></i>
+                    <Row>
+                        {[
+                            {
+                                date: '05 Feb 2026',
+                                category: 'Technology',
+                                title: 'แนวโน้มการใช้ AI ในภาคธุรกิจปี 2026',
+                                desc: 'เจาะลึกเทคโนโลยี AI ที่จะเข้ามาเปลี่ยนโฉมการทำงานในปีนี้ พร้อมรับมือความเปลี่ยนแปลง...',
+                                img: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop'
+                            },
+                            {
+                                date: '28 Jan 2026',
+                                category: 'Infrastructure',
+                                title: 'โครงสร้างพื้นฐาน Cloud สำหรับ Data Analytics',
+                                desc: 'ทำไมการเลือก Cloud ที่ถูกต้องจึงสำคัญต่อความเร็วในการประมวลผลข้อมูลในยุค Big Data...',
+                                img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop'
+                            },
+                            {
+                                date: '15 Jan 2026',
+                                category: 'Success Story',
+                                title: 'Success Story: ปรับโฉมระบบค้าปลีกด้วย Data',
+                                desc: 'กรณีศึกษาจากลูกค้าจริงที่สามารถเพิ่มยอดขายได้กว่า 30% ด้วยการวิเคราะห์ข้อมูลเชิงลึก...',
+                                img: 'https://images.unsplash.com/photo-1556740734-756edeea7f09?q=80&w=800&auto=format&fit=crop'
+                            },
+                            {
+                                date: '10 Jan 2026',
+                                category: 'Event',
+                                title: 'เปิดตัวความร่วมมือกับ Global Tech Partner',
+                                desc: 'Things Analytic จับมือพันธมิตรระดับโลก เพื่อยกระดับการให้บริการในภูมิภาคเอเชีย...',
+                                img: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop'
+                            },
+                            {
+                                date: '01 Jan 2026',
+                                category: 'Career',
+                                title: 'Things Analytic เปิดรับสมัครเพื่อนร่วมทีม!',
+                                desc: 'เรากำลังมองหา Data Scientist และ AI Engineer มาร่วมสร้างอนาคตไปด้วยกัน...',
+                                img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop'
+                            }
+                        ].map((news, idx) => (
+                            <Col lg={4} md={6} key={idx} className="mb-4">
+                                <div className="news-card-simple">
+                                    <div className="news-img">
+                                        <img src={news.img} alt={news.title} className="img-fluid" />
+                                        <div className="news-date">{news.category}</div>
+                                    </div>
+                                    <div className="news-content">
+                                        <p className="text-muted small mb-2"><i className="bx bx-calendar me-1"></i> {news.date}</p>
+                                        <h5 className="mb-3">{news.title}</h5>
+                                        <p className="text-muted small mb-4">{news.desc}</p>
+                                        <a href="#" className="btn-link">อ่านรายละเอียด <i className="bx bx-right-arrow-alt"></i></a>
+                                    </div>
                                 </div>
-                                <h4 className="card-title">เปิดตัวบริการใหม่</h4>
-                                <p className="text-muted mb-2">
-                                    <small><i className='bx bx-calendar me-2'></i>1 กุมภาพันธ์ 2567</small>
-                                </p>
-                                <p className="card-description">
-                                    เราภูมิใจที่จะประกาศเปิดตัวบริการ AI Analytics ที่จะช่วยให้ธุรกิจของคุณ
-                                    วิเคราะห์ข้อมูลได้อย่างชาญฉลาดมากขึ้น
-                                </p>
-                            </div>
-                        </Col>
-                        <Col lg={4} md={6}>
-                            <div className="modern-card fade-in" style={{ animationDelay: '0.1s' }}>
-                                <div style={{
-                                    height: '200px',
-                                    background: 'var(--gradient-accent)',
-                                    borderRadius: 'var(--radius-md)',
-                                    marginBottom: '1.5rem',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    color: 'white',
-                                    fontSize: '3rem'
-                                }}>
-                                    <i className='bx bx-award'></i>
-                                </div>
-                                <h4 className="card-title">รางวัลยอดเยี่ยม</h4>
-                                <p className="text-muted mb-2">
-                                    <small><i className='bx bx-calendar me-2'></i>15 มกราคม 2567</small>
-                                </p>
-                                <p className="card-description">
-                                    Things Analytic ได้รับรางวัล "Best Analytics Solution Provider"
-                                    ประจำปี 2567
-                                </p>
-                            </div>
-                        </Col>
-                        <Col lg={4} md={6}>
-                            <div className="modern-card fade-in" style={{ animationDelay: '0.2s' }}>
-                                <div style={{
-                                    height: '200px',
-                                    background: 'var(--gradient-primary)',
-                                    borderRadius: 'var(--radius-md)',
-                                    marginBottom: '1.5rem',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    color: 'white',
-                                    fontSize: '3rem'
-                                }}>
-                                    <i className='bx bx-slideshow'></i>
-                                </div>
-                                <h4 className="card-title">สัมมนาเทคโนโลยี</h4>
-                                <p className="text-muted mb-2">
-                                    <small><i className='bx bx-calendar me-2'></i>10 ธันวาคม 2566</small>
-                                </p>
-                                <p className="card-description">
-                                    จัดสัมมนา "Digital Transformation 2024" พร้อมผู้เชี่ยวชาญชั้นนำ
-                                    กว่า 500 คน
-                                </p>
-                            </div>
-                        </Col>
+                            </Col>
+                        ))}
                     </Row>
                 </Container>
             </section>
